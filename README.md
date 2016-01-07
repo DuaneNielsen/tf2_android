@@ -3,6 +3,10 @@ tf2_android
 
 Android NDK Wrapper of tf2
 
+[![Build Status](https://travis-ci.org/DuaneNielsen/tf2_android.svg?branch=master)](https://travis-ci.org/DuaneNielsen/tf2_android)
+
+[ ![Download](https://api.bintray.com/packages/duanenielsen/maven/tf2_android/images/download.svg) ](https://bintray.com/duanenielsen/maven/tf2_android/_latestVersion)
+
 How to use tf2_android:
 
 Install ROSJava using these instructions:
