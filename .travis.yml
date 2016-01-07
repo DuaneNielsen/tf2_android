@@ -1,7 +1,7 @@
 language: android
 
-env:
-  - secure: "guqi1KB2CoBo+sqRZhaY41iGGf878IBslZaRFjKsBMTLabX7i6WLG+zafKi6HgfZkLh1i1W/FOpkh7cPSz6lntdvC4DJJ1vRwJovTuYo+POCBrKCcEHhxrII4zqn3coi+BENwzsD0x/ofADqOCK/PmBcUOT4iZ8ZMf9ZQdudeq4="
+#env:
+#  - secure: "guqi1KB2CoBo+sqRZhaY41iGGf878IBslZaRFjKsBMTLabX7i6WLG+zafKi6HgfZkLh1i1W/FOpkh7cPSz6lntdvC4DJJ1vRwJovTuYo+POCBrKCcEHhxrII4zqn3coi+BENwzsD0x/ofADqOCK/PmBcUOT4iZ8ZMf9ZQdudeq4="
 
 # Emulator Management: Create, Start and Wait
 before_script:
