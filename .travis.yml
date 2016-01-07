@@ -1,9 +1,7 @@
 language: android
 
-
 env:
-  - BINTRAY_USER=duanenielsen
-  - secure: "USmN8976W/vJHv6h/iukL2Icrb55ldExhGPJve/3I9kic+8b9Vpneae8v/Fg9dut0WamnkmpQ4a+gFR3G3lzK+ktVNkAEIJT2Yr1NYrg3cSWH0gJIwkKSk8wGTOeoF6yGjTQuoQEbtoTwUmoqe1/atyayHZXC6j+FdgmUA9fs9g="
+  - BINTRAY_USER=duanenielsen secure: "USmN8976W/vJHv6h/iukL2Icrb55ldExhGPJve/3I9kic+8b9Vpneae8v/Fg9dut0WamnkmpQ4a+gFR3G3lzK+ktVNkAEIJT2Yr1NYrg3cSWH0gJIwkKSk8wGTOeoF6yGjTQuoQEbtoTwUmoqe1/atyayHZXC6j+FdgmUA9fs9g="
 
 # Emulator Management: Create, Start and Wait
 before_script:
