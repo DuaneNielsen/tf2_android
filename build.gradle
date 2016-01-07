@@ -20,7 +20,7 @@ task wrapper(type: Wrapper) {
 
 allprojects {
     group 'org.ros.tf2'
-    version = '0.0.0-SNAPSHOT'
+    version = '1.0.2'
 }
 
 ext.androidBuildToolsVersion = "17"
@@ -49,19 +49,45 @@ subprojects {
     }
 
 
+
     uploadArchives {
         repositories {
             mavenDeployer {
-                repository url: 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+                repository ( url: 'https://api.bintray.com/content/duanenielsen/maven/tf2_android/' + version )
+                { authentication ( 
+                    userName : System.getenv('BINTRAY_USER'),
+                    password : System.getenv('BINTRAY_KEY')
+                  ) 
+                }
+                snapshotRepository ( url: 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath )
             }
         }
+        println repositories.mavenDeployer.repository.url.value
     }
     task publishToMavenLocal() << {
         description = 'installs .aar files to the local maven repository.'
     }
+
     afterEvaluate { Project project ->
         if (plugins.findPlugin('android-library')) {
             publishToMavenLocal.dependsOn('uploadArchives')
         }
     }
+
+    //publishing {
+     //   publications {
+      //    bar(MavenPublication) {
+       //     groupId = group
+        //    artifactId 'my_artifact'
+         //   version '0.1'
+          //  artifact("./build/libs/")
+    //      }
+     //   }
+    //  repositories {
+     //     maven {
+      //      url file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+       //   }
+    //  }
+    //}
+
 }
